@@ -759,6 +759,30 @@ img {
 .left{
   font-size: 2rem;
 }
+
+.hero-image {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Transition for language icons */
+.language-icons {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.language-icons.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
     </style>
 </head>
 <body>
@@ -787,7 +811,8 @@ img {
                 </div>
             </div>
             <div class="rightsection">
-                <img src="file.png" alt="Developer image">
+                <!-- /*file.png*/ -->
+                <img src="file.png" alt="Hero Image" class="hero-image">
             </div>
         </section>
         <section class="secondsection" id="Home">
@@ -927,6 +952,34 @@ img {
           strings: ['Web Developer', 'Competitive Programmer', 'Web Designer', 'AIML Enthusiast'],
           typeSpeed: 50,
         });
+        document.addEventListener("DOMContentLoaded", function() {
+    const heroImage = document.querySelector('.hero-image');
+    const languageIcons = document.querySelectorAll('.language-icons');
+
+    // Make the hero image visible when page is loaded
+    heroImage.classList.add('visible');
+
+    // Function to check if elements are in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        languageIcons.forEach(icon => {
+            if (isInViewport(icon)) {
+                icon.classList.add('visible');
+            }
+        });
+    });
+});
+
     </script>
 </body>
 </html>
