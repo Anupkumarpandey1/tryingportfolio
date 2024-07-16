@@ -782,7 +782,68 @@ img {
     opacity: 1;
     transform: translateY(0);
 }
+.footer ul li{
+  padding: 10px 0;
+ }
+.left{
+  font-size: 2rem;
+}
 
+.hero-image {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Transition for language icons */
+.language-icons {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.language-icons.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer__social .img{
+    height: 30px;
+    width: 30px;
+}
+.footer img:hover{
+  color: #ff6347; /* Change color on hover */
+  transform: scale(1.2); /* Scale up the icon */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  width: 50px;
+}
+.footer img:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 99, 71, 0.2); /* Background color */
+  border-radius: 50%; /* Circle shape */
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.footer img {
+  font-size: 2em; /* Adjust as needed */
+  transition: all 0.3s ease; /* Smooth transition */
+  color: #333; /* Default icon color */
+}
+.box image:hover{
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
     </style>
 </head>
 <body>
@@ -941,7 +1002,7 @@ img {
 
         
     </main>
-    <footer>
+<!--     <footer>
         <div class="footer">
             <div class="hero"><h3>Anup's Developer Portfolio</h3></div>
             <div>
@@ -958,7 +1019,25 @@ img {
             Copyright &#169; www.AnupPortfolio.com | All rights reserved
         </div>
     </footer>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
+     <footer class="footer" style="padding-top: 30px;">
+        <p class="footer__title">Anup's Portfolio</p>
+        <div class="footer__social" style="display: flex; ">
+            <a href="https://in.linkedin.com/in/anup-pandey-b9b118282" class="footer__icon"><img src="linkedin.png" alt="nothing" style="height: 40px;"></a>
+            <a href="https://leetcode.com/u/Anup_Kumar_Pandey/" class="footer__icon"><img src="leetcode.svg" alt="nothing" style="height: 40px;"></a>
+            <a href="https://www.hackerrank.com/profile/daredevil9654" class="footer__icon"><img src="hackerrank.svg" alt="nothing" style="height: 40px;"></a>
+            <a href="https://github.com/Anupkumarpandey1" class="footer__icon"><img src="github.png"alt="nothing" style="height: 40px;"></a>
+            <a href="https://anupkumarpandey1.github.io/finalprojectworkoutXPress/" class="footer__icon"><img src="instagram.svg" alt="nothing" style="height: 40px;"></a>
+        </div>
+        <p class="footer__copy" style="padding: 10px 0;">&#169; Anup's-Portfolio. All rigths reserved</p>
+        
+    </footer>
+     <div class="footer-rights" >
+        Copyright &#169; www.Anup's-Portfolio.com | All rights reserved
+    </div>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         var typed = new Typed('#element', {
           strings: ['Web Developer', 'Competitive Programmer', 'Web Designer', 'AIML Enthusiast'],
