@@ -1034,6 +1034,17 @@ img {
     width: 75%;
   }
 }
+        img:not([src]) {
+  display: none;
+}
+
+img[src=""] {
+  display: none;
+}
+
+img[src]:not([src*="."]) {
+  display: none;
+}
 
     </style>
 </head>
@@ -1188,7 +1199,7 @@ img {
             <div class="details-container color-container">
               <div class="article-container">
                 <img
-                  src="./assets/project-1.png"
+                  src=""
                   alt="Personalized Fitness"
                   class="project-img"
                   style="background-color: orange;"
@@ -1216,7 +1227,7 @@ img {
             <div class="details-container color-container">
               <div class="article-container">
                 <img
-                  src="./assets/project-2.png"
+                  src=""
                   alt="Resume Builder"
                   class="project-img"
                   style="background-color: orange;"
@@ -1244,7 +1255,7 @@ img {
             <div class="details-container color-container">
               <div class="article-container">
                 <img
-                  src="./assets/project-3.png"
+                  src=""
                   alt="QR Code + URl Shortner"
                   class="project-img"
                   style="background-color: orange;"
