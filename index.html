@@ -1044,7 +1044,21 @@ img[src=""] {
 
 img[src]:not([src*="."]) {
   display: none;
+
 }
+         img:not([src]), img[src=""], img[src]:not([src*="."]) {
+      display: inline-block;
+      visibility: hidden;
+    }
+    img:not([src])::after, img[src=""]::after, img[src]:not([src*="."])::after {
+      content: attr(alt);
+      visibility: visible;
+      color: #333;
+      display: block;
+      text-align: center;
+      padding: 0.5em;
+      font-size: 14px;
+    }
 
     </style>
 </head>
