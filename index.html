@@ -844,6 +844,185 @@ img {
   transform: scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+
+.rightsection {
+    flex: 1 1 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.rightsection img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.icons-container {
+    margin-top: 20px;
+}
+
+.icons-container img {
+    width: 50px; /* Adjust size as needed */
+    margin: 0 10px;
+}
+
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* Basic Styling */
+#projects {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa00;
+}
+
+.section__text__p1 {
+  font-size: 18px;
+  color: #333;
+}
+
+.title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Container Styling */
+.experience-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Project Card Styling */
+.details-container {
+  background-color: rgb(232, 232, 255);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 12px rgb(44, 255, 0);
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.2s;
+}
+
+.details-container:hover {
+  transform: scale(1.05);
+}
+
+.project-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.experience-sub-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Button Styling */
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Arrow Icon Styling */
+.icon.arrow {
+  margin-top: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon.arrow:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .details-container {
+    width: 100%;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  .project-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .section__text__p1 {
+    font-size: 16px;
+  }
+
+  .experience-sub-title {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .details-container {
+    width: 50%;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -873,12 +1052,13 @@ img {
             </div>
             <div class="rightsection">
                 <!-- /*file.png*/ -->
-                <img src="file.png" alt="Hero Image" class="hero-image">
+                <img src="hero.png" alt="Hero Image" class="hero-image">
             </div>
         </section>
         <section class="secondsection" id="Home">
             <span class="gray">What I have done so far</span>
-            <h1>Skills & Experience</h1>
+            
+            <h2 class="section-title">Skills & Experience</h2>
             <div class="box">
                 <div class="vertical">
                     <img class="image-top" src="html.png" alt="HTML" style="margin:auto;">
@@ -924,6 +1104,7 @@ img {
                 </div>
             </div>
         </section>
+        
         <section class="skills section" id="skills">
           <h2 class="section-title">Skills</h2>
 
@@ -987,9 +1168,110 @@ img {
           </div>
       </section>
          
+      <section id="projects">
+        <p class="section__text__p1" style="color: white;">Browse My Recent</p>
+        <h2 class="section-title">Projects</h2>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/project-1.png"
+                  alt="Personalized Fitness"
+                  class="project-img"
+                  style="background-color: orange;"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Workout Xpress</h2>
+              <img src="workout_express__1_-removebg-preview(1).png" alt="">
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Anupkumarpandey1/lastprojectworkoutXpress'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://anupkumarpandey1.github.io/lastprojectworkoutXpress/'"
+                 style="background-color: #0a0;
+                 font-weight: bolder;
+               ">
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/project-2.png"
+                  alt="Resume Builder"
+                  class="project-img"
+                  style="background-color: orange;"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Career Canvas.</h2>
+              <img src="Career_Canvas.-removebg-preview.png" alt="">
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Anupkumarpandey1/career-canvas.com'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://anupkumarpandey1.github.io/career-canvas.com/'"
+                  style="background-color: #0a0;
+                  font-weight: bolder;
+                ">
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/project-3.png"
+                  alt="QR Code + URl Shortner"
+                  class="project-img"
+                  style="background-color: orange;"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">QR-Gem</h2>
+              <img src="Career_Canvas._2_-removebg-preview.png" alt="">
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Anupkumarpandey1/QRGem'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://anupkumarpandey1.github.io/QRGem/'"
+                  style="background-color: #0a0;
+                  font-weight: bolder;
+                ">
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="icons8-down-arrow-50.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'"
+          style="height: 80px;justify-content: center;align-items: center;display: flex;justify-items: center;margin: 0 auto;padding: ;margin-top: 25px;"
+        />
+      </section>
 
-        <section class="contact section" id="contact">
-    <h2 class="section-title">Contact</h2>
+        <section class="contact section" id="contact" style="
+          margin-top: -75px;
+        ">
+    <h2 class="section-title">Contact Me</h2>
     <div class="contact__container bd-grid">
         <form action="https://formspree.io/f/xanwnpjg" method="POST" class="contact__form">
             <input type="text" placeholder="Name" class="contact__input" name="name">
@@ -1070,6 +1352,21 @@ img {
         });
     });
 });
+
+
+// JavaScript code for hover effect on icons (optional)
+const icons = document.querySelectorAll('.icons-container img');
+
+icons.forEach(icon => {
+    icon.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.2)'; // Example transform on hover
+    });
+    
+    icon.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)'; // Return to original size on hover out
+    });
+});
+
 
     </script>
 </body>
